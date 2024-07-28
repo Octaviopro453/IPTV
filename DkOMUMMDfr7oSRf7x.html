@@ -1,0 +1,494 @@
+<html><head><base href="https://octaviopro453.github.io/IPTV/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Reproductor de IPTV Personalizado</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  #player-container {
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+  }
+  #video-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+  }
+  #video-player {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  #custom-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: opacity 0.3s;
+  }
+  #video-wrapper:hover #custom-controls {
+    opacity: 1;
+  }
+  #play-pause, #fullscreen, #more-options {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s;
+  }
+  #play-pause:hover, #fullscreen:hover, #more-options:hover {
+    transform: scale(1.1);
+  }
+  #timeline {
+    flex-grow: 1;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    margin: 0 10px;
+    min-width: 100px;
+    position: relative;
+  }
+  #progress {
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #time-display {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  #volume-menu {
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+  #volume-menu.show {
+    display: block;
+  }
+  #volume-control {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  #mute {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  #volume-slider {
+    width: 100px;
+    -webkit-appearance: none;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    height: 5px;
+    border-radius: 5px;
+  }
+  #volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  #volume-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+  #controls {
+    width: 100%;
+    padding: 10px;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  select, button {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: rgba(76, 175, 80, 0.7);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  select:hover, button:hover {
+    background-color: rgba(69, 160, 73, 0.9);
+  }
+  #channel-list {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    background-color: #111;
+    border-top: 1px solid #333;
+  }
+  #channel-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+    border-bottom: 1px solid #333;
+  }
+  #channel-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  #channel-list li.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+  }
+  
+  @media screen and (orientation: portrait) {
+    #player-container {
+      height: auto;
+    }
+    #video-wrapper {
+      padding-top: 56.25%; /* 16:9 aspect ratio */
+    }
+    #video-player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    #player-container {
+      height: 56.25vw; /* 16:9 aspect ratio */
+      max-height: 100vh;
+    }
+    #video-wrapper {
+      height: 100%;
+    }
+    #video-player {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <div id="player-container">
+    <div id="video-wrapper">
+      <video id="video-player"></video>
+      <div id="custom-controls">
+        <button id="play-pause">▶</button>
+        <div id="timeline">
+          <div id="progress"></div>
+        </div>
+        <span id="time-display">0:00 / 0:00</span>
+        <button id="fullscreen">⛶</button>
+        <button id="more-options">⋮</button>
+      </div>
+      <div id="volume-menu">
+        <div id="volume-control">
+          <button id="mute">🔊</button>
+          <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="controls">
+    <select id="category-select">
+      <option value="">Selecciona una categoría</option>
+    </select>
+  </div>
+  <ul id="channel-list"></ul>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.1.5/hls.min.js"></script>
+  <script>
+    const videoPlayer = document.getElementById('video-player');
+    const videoWrapper = document.getElementById('video-wrapper');
+    const categorySelect = document.getElementById('category-select');
+    const channelList = document.getElementById('channel-list');
+    const playPauseBtn = document.getElementById('play-pause');
+    const muteBtn = document.getElementById('mute');
+    const fullscreenBtn = document.getElementById('fullscreen');
+    const moreOptionsBtn = document.getElementById('more-options');
+    const volumeMenu = document.getElementById('volume-menu');
+    const timeline = document.getElementById('timeline');
+    const progress = document.getElementById('progress');
+    const timeDisplay = document.getElementById('time-display');
+    const volumeSlider = document.getElementById('volume-slider');
+    const customControls = document.getElementById('custom-controls');
+    let categories = {};
+
+    async function fetchM3UFiles() {
+      try {
+        const response = await fetch('index.html');
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const links = doc.querySelectorAll('a[href$=".m3u"]');
+        
+        for (const link of links) {
+          const categoryName = link.textContent.trim();
+          const m3uUrl = link.getAttribute('href');
+          const m3uContent = await fetchM3U(m3uUrl);
+          categories[categoryName] = parseM3U(m3uContent);
+        }
+
+        populateCategorySelect();
+      } catch (error) {
+        console.error('Error al cargar las listas M3U:', error);
+      }
+    }
+
+    async function fetchM3U(url) {
+      const response = await fetch(url);
+      return await response.text();
+    }
+
+    function parseM3U(content) {
+      const lines = content.split('\n');
+      const channels = [];
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith('#EXTINF:')) {
+          const title = lines[i].split(',')[1];
+          const url = lines[i + 1].trim();
+          channels.push({ title, url });
+        }
+      }
+      return channels;
+    }
+
+    function populateCategorySelect() {
+      for (const category in categories) {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        categorySelect.appendChild(option);
+      }
+    }
+
+    function displayChannels(category) {
+      channelList.innerHTML = '';
+      categories[category].forEach((channel, index) => {
+        const li = document.createElement('li');
+        li.textContent = channel.title;
+        li.addEventListener('click', () => loadVideo(channel.url, li));
+        channelList.appendChild(li);
+      });
+    }
+
+    function loadVideo(url, listItem) {
+      const channelItems = channelList.getElementsByTagName('li');
+      for (let i = 0; i < channelItems.length; i++) {
+        channelItems[i].classList.remove('active');
+      }
+      listItem.classList.add('active');
+
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(videoPlayer);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          videoPlayer.play();
+        });
+      } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+        videoPlayer.src = url;
+        videoPlayer.addEventListener('loadedmetadata', function() {
+          videoPlayer.play();
+        });
+      }
+    }
+
+    categorySelect.addEventListener('change', (e) => {
+      const selectedCategory = e.target.value;
+      if (selectedCategory) {
+        displayChannels(selectedCategory);
+      } else {
+        channelList.innerHTML = '';
+      }
+    });
+
+    // Custom controls functionality
+    playPauseBtn.addEventListener('click', togglePlayPause);
+    videoPlayer.addEventListener('click', togglePlayPause);
+
+    function togglePlayPause() {
+      if (videoPlayer.paused) {
+        videoPlayer.play();
+        playPauseBtn.textContent = '⏸';
+      } else {
+        videoPlayer.pause();
+        playPauseBtn.textContent = '▶';
+      }
+    }
+
+    muteBtn.addEventListener('click', () => {
+      videoPlayer.muted = !videoPlayer.muted;
+      muteBtn.textContent = videoPlayer.muted ? '🔇' : '🔊';
+      volumeSlider.value = videoPlayer.muted ? 0 : videoPlayer.volume;
+    });
+
+    fullscreenBtn.addEventListener('click', () => {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else {
+        videoWrapper.requestFullscreen();
+      }
+    });
+
+    moreOptionsBtn.addEventListener('click', () => {
+      volumeMenu.classList.toggle('show');
+    });
+
+    // Close volume menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!volumeMenu.contains(e.target) && e.target !== moreOptionsBtn) {
+        volumeMenu.classList.remove('show');
+      }
+    });
+
+    timeline.addEventListener('click', (e) => {
+      const rect = timeline.getBoundingClientRect();
+      const pos = (e.clientX - rect.left) / rect.width;
+      videoPlayer.currentTime = pos * videoPlayer.duration;
+    });
+
+    volumeSlider.addEventListener('input', () => {
+      videoPlayer.volume = volumeSlider.value;
+      videoPlayer.muted = (volumeSlider.value === '0');
+      muteBtn.textContent = (volumeSlider.value === '0') ? '🔇' : '🔊';
+    });
+
+    videoPlayer.addEventListener('timeupdate', () => {
+      const currentTime = formatTime(videoPlayer.currentTime);
+      const duration = formatTime(videoPlayer.duration);
+      timeDisplay.textContent = `${currentTime} / ${duration}`;
+      const progressPercentage = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+      progress.style.width = `${progressPercentage}%`;
+    });
+
+    function formatTime(timeInSeconds) {
+      const minutes = Math.floor(timeInSeconds / 60);
+      const seconds = Math.floor(timeInSeconds % 60);
+      return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    // Hide controls when mouse is inactive
+    let controlsTimeout;
+    videoWrapper.addEventListener('mousemove', () => {
+      customControls.style.opacity = '1';
+      clearTimeout(controlsTimeout);
+      controlsTimeout = setTimeout(() => {
+        if (!videoPlayer.paused) {
+          customControls.style.opacity = '0';
+          volumeMenu.classList.remove('show');
+        }
+      }, 3000);
+    });
+
+    videoWrapper.addEventListener('mouseout', () => {
+      if (!videoPlayer.paused) {
+        customControls.style.opacity = '0';
+        volumeMenu.classList.remove('show');
+      }
+    });
+
+    fetchM3UFiles();
+
+    // Prevent scrolling when touching the video player
+    videoWrapper.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    }, { passive: false });
+
+    // Allow scrolling on the channel list
+    channelList.addEventListener('touchmove', function(e) {
+      e.stopPropagation();
+    }, { passive: true });
+
+    // Handle orientation change
+    window.addEventListener('orientationchange', function() {
+      setTimeout(function() {
+        window.scrollTo(0, 0);
+      }, 200);
+    });
+
+    // Initial call to set the correct layout
+    setVideoLayout();
+
+    // Set video layout based on orientation
+    function setVideoLayout() {
+      const playerContainer = document.getElementById('player-container');
+      const videoWrapper = document.getElementById('video-wrapper');
+      const videoPlayer = document.getElementById('video-player');
+
+      if (window.matchMedia("(orientation: portrait)").matches) {
+        playerContainer.style.height = 'auto';
+        videoWrapper.style.paddingTop = '56.25%';
+        videoPlayer.style.position = 'absolute';
+        videoPlayer.style.top = '0';
+        videoPlayer.style.left = '0';
+        videoPlayer.style.width = '100%';
+        videoPlayer.style.height = '100%';
+      } else {
+        playerContainer.style.height = '56.25vw';
+        playerContainer.style.maxHeight = '100vh';
+        videoWrapper.style.height = '100%';
+        videoWrapper.style.paddingTop = '0';
+        videoPlayer.style.position = 'absolute';
+        videoPlayer.style.top = '0';
+        videoPlayer.style.left = '0';
+        videoPlayer.style.width = '100%';
+        videoPlayer.style.height = '100%';
+      }
+    }
+
+    // Call setVideoLayout on orientation change
+    window.addEventListener('orientationchange', setVideoLayout);
+  </script>
+</body>
+</html>
