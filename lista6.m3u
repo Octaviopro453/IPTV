@@ -1,0 +1,316 @@
+#EXTM3U
+#EXTINF:-1,--- LISTA GRATIS achoAPPS.com
+http://www.achoTV.com
+#EXTINF:-1,--- Visita www.achoAPPS.com ---
+
+#EXTINF:-1 tvg-logo="http://exorbeo.com/wp-content/uploads/blogger/-Atdq5-hrhmg/TvtVTY_6bRI/AAAAAAAAAxM/0NEOw_seIho/s1600/maxprime.jpg" group-title="CINE", Max Prime
+http://138.117.4.70:8079/streams/d/Canal-13/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3a/HBO_Family_logo.png" group-title="CINE", HBO Family
+http://f7.mytvxweb.net:8082/18096/mpegts?token=MxPReBvRE1
+
+#EXTINF:-1 tvg-logo="http://www.totalplay.com.mx/images/logos/canales/fox/fox-movies-hd.png" group-title="CINE", Fox Movies
+http://161.0.157.6/PLTV/88888888/224/3221226321/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://www.cnt.gob.ec/tv/wp-content/uploads/sites/5/2014/10/FOX-Comedy-Logo-01.png" group-title="CINE", Fox Comedy
+http://161.0.157.9/PLTV/88888888/224/3221226800/index.m3u8
+
+#EXTINF:-1 tvg-logo="http://3.bp.blogspot.com/-zmTGzafOIe8/Vfz6Yzk1MQI/AAAAAAAAAX0/bomr2zyOrdw/s400/logo%2BFOX%2BFAMILY.png" group-title="CINE", Fox Family
+http://45.230.168.133:8000/play/a03t
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://dominicanchannels.net/wp-content/uploads/2014/09/telecanal12.jpg" group-title="DOMINICANOS",TELECANAL 12
+https://59f2354c05961.streamlock.net:1443/tele12/_definst_/tele12/chunklist_w604165634.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://2.bp.blogspot.com/-douz5m2OGpA/WJPShgh1CqI/AAAAAAAADIM/wwLgAL_KLgQV9CkFbdVf8bwB0CGMn9aPQCLcB/w700-h400-p-k-no-nu/Telenovisa%2Bcanal%2B43%2Ben%2Bvivo.png" group-title="DOMINICANOS",TELENOVISA 43
+http://74.108.36.101:1935/telenovisa43/telenovisa43/chunklist_w170436972.m3u8
+
+#EXTINF:-1 tvg-logo="https://image.ibb.co/bHNsj7/Captura_de_pantalla_22.png" group-title="Latinos", FMHOT HD
+http://fmhot.04.cl.cdnz.cl/fmhot/smil:cdn.smil/chunklist_b500000_slesp.m3u8
+
+#EXTINF:-1 tvg-logo="http://dominicanchannels.net/wp-content/uploads/2014/12/galaxiatv.png" group-title="MUSICA", Galaxia Tv
+http://server3.prostudionetwork.com:1957/telecontacto/galaxia/chunklist_w500062277.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://www.tv14.net/wp-content/uploads/2010/09/Fuego-TV.jpg" group-title="DOMINICANOS",FUEGO TV
+http://184.173.181.2:1935/8020/8020/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://yt3.ggpht.com/-zZ1mqD-N3D0/AAAAAAAAAAI/AAAAAAAAAAA/aQXLTyHZhTE/s288-c-k-no-mo-rj-c0xffffff/photo.jpg" group-title="Latinos", Canal 3 (Argentina)
+http://wowza.telpin.com.ar:1935/canal3/canal3.stream/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://yt3.ggpht.com/-oWwq4sz7xi8/AAAAAAAAAAI/AAAAAAAAAAA/EVeSO1aMco8/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" group-title="Latinos", Canal Wow TV
+http://cdn.elsalvadordigital.com:1935/wowtv/wowtv/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://yt3.ggpht.com/-D1Z6emsTKE0/AAAAAAAAAAI/AAAAAAAAAAA/46wxJGxiRkc/s176-c-k-no-mo-rj-c0xffffff/photo.jpg" group-title="NOTICIAS",DW Amerika
+http://dwstream3-lh.akamaihd.net/i/dwstream3_live@124409/index_1_av-b.m3u8?sd=10&rebase=on
+
+#EXTINF:-1,TELMD
+http://138.117.4.70:8079/streams/d/Canal-11/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://img.youtube.com/vi/36SGwRc_3fk/0.jpg" group-title="Latinos", TeleRed
+http://k4.usastreams.com/Telesistemas/Telesistemas/media_w352570325.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://canalesdominicanosenvivo.com/wp-content/uploads/2014/05/station_46.png" group-title="DOMINICANOS",TV RECUERDO 56
+http://media.az-streamingserver.com:1935/7230/7230/chunklist_w1454579731.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://dominicanchannels.com/wp-content/uploads/2014/10/orbit-tv-1.png" group-title="DOMINICANOS",ORBIT 10
+http://ss6.domint.net:2082/202_str/orbittv/media_w29206476_playlist.m3u8
+
+#EXTINF:-1 tvg-logo="http://www.CINEytele.com/wp-content/uploads/2016/06/paramount-channel.png" group-title="CINE", Paramount Channel
+http://paramount.live.flumotion.com/live/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="http://dominicanchannels.com/wp-content/uploads/2014/02/lunatv-1.jpg" group-title="Latinos", Luna Tv
+http://ss1.domint.net:2140/luna_str/lunatv/media_w719846308.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://canalesdominicanosenvivo.com/wp-content/uploads/2013/09/LogoSTV55-Canales-Dominicanos-Online.jpg" group-title="DOMINICANOS",SUPE55
+http://ss8.domint.net:2128/stv_str/tv55/chunklist_w1389944491.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://tvonline.linkscomdo.netdna-cdn.com/images/sobipro/entries/17/img_microvision-online-en-vivo-canal-10.png" group-title="DOMINICANOS",MICROVISION 10
+http://190.103.183.24:1935/live/MicroHD/chunklist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://canalesdominicanosenvivo.com/wp-content/uploads/2013/09/TRa.jpg" group-title="DOMINICANOS",TRA 45
+http://ss1.domint.net:2310/tra_str/canal45/chunklist_w908202833.m3u8
+
+#EXTINF:-1 tvg-logo="http://www.totalplay.com.mx/images/logos/canales/hbomax/1.png" group-title="CINE", HBO
+http://f4.tvxweb.net:8082/9040/mpegts?token=MxPReBvRE1
+
+#EXTINF:-1 tvg-logo="http://z.cdn.entutele.com/media/channels/medium/hbo-2.gif" group-title="CINE", HBO 2
+http://161.0.157.6/PLTV/88888888/224/3221227026/03.m3u8
+
+#EXTINF:-1 tvg-logo="http://z.cdn.entutele.com/media/channels/medium/hbo-plus-w.gif" group-title="CINE", HBO Plus
+http://f7.mytvxweb.net:8082/18086/mpegts?token=MxPReBvRE1
+
+#EXTINF:-1,TELESUR
+http://wceatv1.srfms.com:2177/live/livestream/playlist.m3u8?JoCaRoIPTV.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://static-media.streema.com/media/cache/57/8e/578efa7e444748546982fbc23f985e4d.jpg" group-title="DOMINICANOS",zol tv
+http://ss6.domint.net:1948/zol_str/vzol/chunklist.m3u8
+
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/3663601877/9f46b5977e2c9d2e370e46d686a95ef7_400x400.jpeg" group-title="Latinos", BHTV
+http://cdn2.ujjina.com:1935/iptvbhtv/livebhtvtv/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="http://4.bp.blogspot.com/-3QImK9KP2KE/TwOQkE7KC-I/AAAAAAAAERI/L4FEY3Jfa4k/s1600/5energy3.jpg" group-title="España", E
+https://mdslivehlsb-i.akamaihd.net/hls/live/623617/energy/bitrate_1.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Divinity.svg/1200px-Divinity.svg.png" group-title="DOMINICANOS",DIVINITY ESP
+http://mdslivehls-i.akamaihd.net/hls/live/571648/divinity/bitrate_3.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="FDF" tvg-logo="https://vodtv.dyndns.tv/vod/PICONS/FDF.png" group-title="FUSION ESPAÑA",FDF
+https://mdslivehls-i.akamaihd.net/hls/live/571650/fdf/bitrate_3.m3u8
+
+#EXTINF:-1 tvg-logo="https://lh6.googleusercontent.com/-EUCjF4Ff5V4/UYURXfRHd4I/AAAAAAAAB4I/_ceVk-yAxuI/s288/logo%2520de%2520TVO%25202011-actual%2520v2.png" group-title="Latinos", TVO
+http://edge.wms28.lorini.net/tvo/tvo/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="http://www.abctelefonos.com/images/comercios/289120_60288_original.jpg" group-title="NOTICIAS", Canal 26
+http://live-edge01.telecentro.net.ar/live/26hd-360/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="http://4.bp.blogspot.com/-m65EylYdJqA/U2FfOeOWYYI/AAAAAAABgEA/Ps0YyQdpd-I/s1600/NTN24.jpg" group-title="NOTICIAS", NTN24
+http://138.117.4.70:8079/streams/d/Canal-10/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/93/Super_tv_logo_300dpi.jpg" group-title="Latinos",SUPETV
+http://iptvcolombia.ddns.net/hls-live/livepkgr/_definst_/liveevent/lasupertv.m3u8
+
+#EXTINF:-1 tvg-logo="http://tvonlinegratis.com/wp-content/uploads/2014/06/Canal10-Chiapas-Logo-300x300.jpg" group-title="MEXICO", Canal 10 Chiapas
+http://stream2.dynalias.com:1935/live/tvlive1/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="http://tvonlinegratis.com/wp-content/uploads/2014/06/Canal10-Chiapas-Logo.jpg" group-title="España", CANAL10
+http://klive-a.akamaihd.net/dc-0/live/hls/p/290412/e/0_es0kdjdz/sd/10000/t/bj1DqoE8O0tNhHgd6BvqXQ/index-s32.m3u8
+
+#EXTINF:-1 tvg-logo="https://yt3.ggpht.com/-xLc6gsl9aZc/AAAAAAAAAAI/AAAAAAAAAAA/xL2FHkpJoIo/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" group-title="España", 4TV
+http://184.154.28.210:1935/canal4/canal4/live.m3u8
+
+#EXTINF:-1 tvg-logo="http://nrtmexico.mx/site/images/sampledata/icetheme/slideshow/c4_slide_a.jpg" group-title="MEXICO", Canal 4
+http://streamyes.alsolnet.com:1935/canal4sanjuan/live/chunklist_w931974462.m3u8
+
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1014700120074416129/YCBrEdko_400x400.jpg" group-title="MEXICO", Canal Nu9ve (Torreon)
+https://5975e06a1f292.streamlock.net:4443/c9web/ngrp:c9web_all/playlist.m3u8?fluxustv.m3u8
+
+#EXTINF:-1 tvg-logo="http://www.dazplayer.com/img_chh/canal_m.png" group-title="Latinos", Canal M
+http://panel.dattalive.com:1935/8250/8250/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="http://okteve.com/wp-content/uploads/media/8db39f5a11cb95c8a6b33831cf2c0dc6-370x208.jpeg" group-title="MUSICA", California Music Channel
+http://cmctv.ios.internapcdn.net/cmctv_vitalstream_com/live_1/CMCUSA/CCURstream0.m3u8
+
+#EXTINF:-1,caracol
+http://159.65.231.196:25461/elvin102@hotmail.com/CHIno456/854
+
+#EXTINF:-1,elmatino
+http://159.65.231.196:25461/elvin102@hotmail.com/CHIno456/1003
+
+#EXTINF:-1, tlmd
+http://159.65.231.196:25461/elvin102@hotmail.com/CHIno456/860
+
+#EXTINF:-1 tvg-logo="https://narcoplay.com/wp-content/uploads/2018/05/NEXXO-TV.jpg" group-title="CULTURA", Nexxo Tv
+http://ss6.domint.net:2106/nxo_str/nexxotv/chunklist_DVR.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://canalesdominicanosenvivo.com/wp-content/uploads/2013/09/Canal-25.jpg" group-title="DOMINICANOS",CANAL 25
+http://ss1.domint.net:2108/c25_str/canal25/chunklist_w1321895509.m3u8
+
+#EXTINF:-1 tvg-logo="https://image.freepik.com/psd-gratis/retro-tv-icono-psd_30-2308.jpg" group-title="MEXICO", CLASICOS ACS
+http://inliveserver.com:1935/8468/8468/chunklist_w225645864.m3u8
+
+#EXTINF:-1 tvg-logo="http://syn.org.au/app/uploads/channel31logo.jpg" group-title="CINE", COTUY3
+http://ss1.domint.net:2124/tvc_str/tvcotui/chunklist_w1445446963.m3u8
+
+#EXTINF:-1 tvg-logo="http://tvonline.linkscomdo.netdna-cdn.com/images/sobipro/entries/24/img_romana-tv-canal-42.jpg" group-title="CINE", ROMANA TV
+http://tv.romanatv42.com/hls/live.m3u8
+
+#EXTINF:-1 tvg-logo="http://www.itver.cc/wp-content/uploads/2015/05/Maimon-TV.jpg" group-title="CINE", MALMON3 TV
+http://ss8.domint.net:8112/mtd_str/miamontv/chunklist.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://emisoradominicana.net/television/wp-content/uploads/2015/06/telenord.jpg" group-title="DOMINICANOS",TENOR 8
+http://newyorkstreamss2.ddns.net:28987/telenord8/telenord8/chunklist_w1702205271.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://emisoradominicana.net/television/wp-content/uploads/2015/06/telenord.jpg" group-title="DOMINICANOS",TENOR10
+http://newyorkstreamss2.ddns.net:28987/telenord10/telenord10/chunklist_w1592465196.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://emisoradominicana.net/television/wp-content/uploads/2015/06/telenord.jpg" group-title="DOMINICANOS",TENOR 12
+http://newyorkstreamss2.ddns.net:28987/telenord12/telenord12/chunklist_w646820866.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://www.khmer440.com/k/wp-content/uploads/2014/03/CTN.png" group-title="DOMINICANOS",Tv CNT
+https://59ef525c24caa.streamlock.net/ctn/ctn/chunklist_w1854842063.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="http://www.fotosdigitalesgratis.com/noticias/fotos/Canal21-Chillan-Logo.jpg" group-title="DOMINICANOS",TV DIGITAL
+http://ss1.domint.net:2106/dv6_str/digitalvision/chunklist.m3u8
+
+#EXTINF:-1, TV HD
+http://st2.worldkast.com/8030/8030/chunklist_w336376880.m3u8
+
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://davilapublicidad.com/wp-content/uploads/2017/09/davila_telecaribe-1.jpg" group-title="DOMINICANOS",TELECARIVE
+http://ss1.domint.net:2208/tka_str/telekaribe/chunklist_w1465001627.m3u8
+
+#EXTINF:-1 tvg-logo="http://dominicanchannels.com/wp-content/uploads/2014/09/telcanal28.png" group-title="NOTCIA",CANAL28
+http://cm.hostlagarto.com:8081/Telecanal-28/telecanal.myStream/chunks.m3u8
+
+#EXTINF:-1,Tv Aracati HD
+http://wse7.player.tv.br:1935/tvaracati/tvaracati/chunklist_w313572700.m3u8
+
+#EXTINF:-1,TLSD
+http://etbvnogeo-lh.akamaihd.net/i/ETBEITBEUS_1@300391/master.m3u8
+
+#EXTINF:-1,  GALIC
+http://america-crtvg.flumotion.com/playlist.m3u8
+
+#EXTINF:-1,TLC33
+http://streaming.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/live.smil/.m3u8
+
+#EXTINF:-1, DW LATINO-
+http://dwstream3-lh.akamaihd.net/i/dwstream3_live@124409/index_5_av-p.m3u8?xtreamiptv.m3u8
+
+#EXTINF:-1,  CTC
+http://livestreamingperu.com:1935/ctctv/ctctv/chunklist.m3u8
+
+#EXTINF:-1, SOL TV
+http://wowzaserver.net:1935/vivo21/vivo21/playlist.m3u8
+
+#EXTINF:-1,TV N
+http://unlimited2-us.dps.live/nettv/nettv.smil/playlist.m3u8
+
+#EXTINF:-1, TV NOTICIA
+http://cdnh4.iblups.com/hls/RMuwrdk7M9.m3u8
+
+#EXTINF:-1, VER T6V
+http://tengomusica.ddns.net:1935/telever/telever.sdp/playlist.m3u8
+
+#EXTINF:-1, TC
+http://elcanaldelfutbol.com/static/wowza/test/hls/10001/720p/playlist.m3u8
+
+#EXTINF:-1, TV B
+https://593b04c4c5670.streamlock.net/8134/8134/chunklist_w1803894255.m3u8
+
+#EXTINF:-1,   U TV
+http://81.196.0.126/utvedge/utvlivehls/chunklist_w1688658104.m3u8?iptvgratis?chile.m3u8
+
+#EXTINF:-1,TH
+http://201.219.100.30:1935/telpintv/ttv.stream_360p/playlist.m3u8
+
+#EXTINF:-1, GTB
+http://teledifusion.tv:1935/rtvcetv/rtvcetvlive/playlist.m3u8
+
+#EXTINF:-1, WTP
+http://ecuastream.net:1935/UCSGHQ/UCSGHQ/playlist.m3u8
+
+#EXTINF:-1,TV
+http://45.230.168.133:8000/play/a00c
+
+#EXTINF:-1, TELEMUNDO PR
+http://wowza.telpin.com.ar:1935/telpintv/ttv.stream_720p/.m3u8
+
+#EXTINF:-1,PARA TODO 7
+https://5975e06a1f292.streamlock.net:4443/canal7jujuy/ngrp:canal7jujuy_all/chunklist_w619585498_b1021952.m3u8
+
+#EXTINF:-1 tvg-logo="http://www.roastbrief.com.mx/wp-content/uploads/2011/10/Discovery-Science-Logo-640x239.jpg" group-title="CULTURA", Discovery Science
+http://159.65.231.196:25461/elvin102@hotmail.com/CHIno456/952
+
+#EXTINF:-1, FOX ACIO
+http://159.65.231.196:25461/elvin102@hotmail.com/CHIno456/769
+
+#EXTINF:-1,FOX MOV
+http://159.65.231.196:25461/elvin102@hotmail.com/CHIno456/865
+
+#EXTINF:-1, HBO 3
+http://159.65.231.196:25461/elvin102@hotmail.com/CHIno456/690
+
+#EXTINF:-1, HBO
+http://159.65.231.196:25461/elvin102@hotmail.com/CHIno456/995
+
+#EXTINF:-1,SPAIN:BOING
+https://mdslivehlsb-i.akamaihd.net/hls/live/623616/boing/bitrate_4.m3u8
+
+#EXTINF:-1,CANL04
+http://streaming.arcast.com.ar:1935/canal4esquel/canal4esquel/chunklist_w283167105.m3u8
+
+#EXTINF:-1,PLE04
+http://videostream.shockmedia.com.ar:1935/telejunin/telejunin/chunklist_w239103836.m3u8
+
+#EXTINF:-1,HBO PLU
+http://edge1.cl.grupoz.cl/cachipuntv/live/chunklist_w2057048261.m3u8
+
+#EXTINF:-1, HBO FM
+http://k4.usastreams.com/Telesistemas/Telesistemas/playlist.m3u8
+
+#EXTINF:-1, 45
+http://ss1.domint.net:2310/tra_str/canal45/chunklist_w1584687002.m3u8
+
+#EXTINF:-1,CORD
+http://159.65.231.196:25461/elvin102@hotmail.com/CHIno456/719
+
+#EXTINF:-1 tvg-logo="http://i.imgur.com/ROPlvzc.png" group-title="Canales Españoles", A Punt | SD
+https://cflive-emea.live-delivery.ooyala.com/out/u/jb44pwd2tj7w5/111819/wyYXIxZTE6okZbyKLzxq8TXa4a-SQlAO/cs/d77d4356674b449695b1c0f19fbd6fae_6.m3u8
+
+#EXTINF:-1,LANCELOT
+http://62.210.141.18:1935/directo/lancelot.television/chunklist_w350778724.m3u8
+
+#EXTINF:-1,TSN
+http://wms.shared.streamshow.it:1935/tsn2/tsn2/live.m3u8
+
+#EXTINF:-1,CL3
+http://stream02.shockmedia.com.ar:1935/cl3cable/cl3cable/chunklist_w503758088.m3u8
+
+#EXTINF:-1,CIUDAD TV CHACO
+http://coninfo.net:1935/chacodxdtv/live/chunklist_w1623593551.m3u8
+
+#EXTINF:-1,EXTREMADURA TV
+http://bit.ly/2CLkNU9
+
+#EXTINF:-1 tvg-logo="https://vignette.wikia.nocookie.net/logopedia/images/e/ec/Canal_5_Honduras.png/revision/latest?cb=20180502195430" group-title="HONDURAS", Canal 5
+https://trinity-lh.akamaihd.net/i/TelevicentroLive2_d@508538/master.m3u8
+
+#EXTINF:-1 tvg-logo="http://y.cdn.entutele.com/media/channels/big/azteca-7.gif" group-title="MEXICO",TELEMAR CAMPECHE
+http://wms.tecnoxia.com:1935/8006/8006/playlist.m3u
+
+#EXTINF:-1 tvg-logo="http://www.honduras504.com/img/tv/CholusatSurCanal36.png" group-title="HONDURAS",CHOLUSAT HONDURAS
+http://live.audiotvserver.com:1935/livemedia/cholusat/playlist.m3u8
+
+#EXTINF:-1, Canal 2 Nicaragua
+http://138.117.4.70:8079/streams/d/Canal-2/playlist.m3u8
+
+#EXTINF:-2, Canal 4 Nicaragua
+http://138.117.4.70:8079/streams/d/Canal-4/playlist.m3u8
+
+#EXTINF:-3, Canal 6 Nicaragua
+http://138.117.4.70:8079/streams/d/Canal-6/playlist.m3u8
+
+#EXTINF:-4, Canal 8 Nicaragua
+http://138.117.4.70:8079/streams/d/Canal-8/playlist.m3u8
+
+#EXTINF:-5, Canal 9 Nicaragua
+http://138.117.4.70:8079/streams/d/Canal-9/playlist.m3u8
